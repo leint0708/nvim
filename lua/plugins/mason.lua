@@ -22,7 +22,6 @@ return {
 				"cssls",
 				"emmet_language_server",
 				"emmet_ls",
-        "texlab",
 				-- Format
 				"prettier",
 				"stylua",

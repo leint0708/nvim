@@ -4,7 +4,7 @@ vim.lsp.enable({
 	"html",
 	"cssls",
 	"emmet_language_server",
-  "texlab",
+  "tinymist",
 })
 
 vim.diagnostic.config({

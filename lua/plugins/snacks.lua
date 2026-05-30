@@ -234,7 +234,7 @@ return {
 		{
 			"<leader>sk",
 			function()
-				Snacks.picker.keymap()
+				Snacks.picker.keymaps()
 			end,
 			desc = "Keymap",
 		},

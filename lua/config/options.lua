@@ -46,4 +46,14 @@ vim.opt.iskeyword:append "-"
 vim.opt.formatoptions:remove({ "c", "r", "o" })
 vim.opt.runtimepath:remove("/usr/share/vim/vimfiles")
 
-vim.opt.shell = "pwsh"
+local is_windows = vim.fn.has("win32") == 1 or vim.fn.has("wsl") == 1
+if is_windows then
+  vim.opt.shell = "pwsh"
+  vim.opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
+  vim.opt.shellxquote = ""
+  vim.opt.shellquote = ""
+  vim.opt.shellpipe = "| Out-File -Encoding UTF8 %s"
+  vim.opt.shellredir = "| Out-File -Encoding UTF8 %s"
+else
+  vim.opt.shell = vim.fn.executable("zsh") == 1 and "zsh" or "bash"
+end

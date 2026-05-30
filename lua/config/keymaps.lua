@@ -35,8 +35,8 @@ keymap("n", "<leader>sx", ":close<CR>",    { desc = "Close split" })
 keymap("n", "<leader>L", ":Lazy<CR>",      { desc = "Lazy" })
 
 -- buffer
-keymap("n", "<TAB>",       ":BufferLineCycleNext<CR>", { desc = "Next buffer" })
-keymap("n", "<S-TAB>",     ":BufferLineCyclePrev<CR>", { desc = "Prev buffer" })
+keymap("n", "<TAB>",       ":bnext<CR>", { desc = "Next buffer" })
+keymap("n", "<S-TAB>",     ":bprev<CR>", { desc = "Prev buffer" })
 keymap("n", "<leader>bd", function()
   local bufs = vim.fn.getbufinfo({ buflisted = 1 })
   if #bufs == 1 then
