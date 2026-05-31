@@ -11,7 +11,6 @@ return {
 				lua = { "stylua" },
 				cpp = { "clang-format" },
 				c = { "clang-format" },
-				tex = { "latexindent" },
 				typ = { "typstyle" },
 				["*"] = { "trim_whitespace" },
 			},

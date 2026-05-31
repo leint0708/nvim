@@ -38,6 +38,19 @@ vim.lsp.config("*", {
 	capabilities = lsp_capabilities,
 })
 
+vim.lsp.config('lua_ls', {
+  settings = {
+    Lua = {
+      diagnostics = { globals = { 'vim' } }
+    }
+  }
+})
+vim.lsp.config('clangd', {})
+vim.lsp.config('cssls', {})
+vim.lsp.config('html', {})
+vim.lsp.config('tinymist', {})
+vim.lsp.config('emmet_language_server', {})
+
 local blink_status_ok, blink = pcall(require, "blink.cmp")
 if blink_status_ok then
 	local ext_capabilities = vim.tbl_deep_extend("force", {}, lsp_capabilities, blink.get_lsp_capabilities())

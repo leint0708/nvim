@@ -22,6 +22,7 @@ return {
 				"cssls",
 				"emmet_language_server",
 				"emmet_ls",
+        "tinymist",
 				-- Format
 				"prettier",
 				"stylua",
